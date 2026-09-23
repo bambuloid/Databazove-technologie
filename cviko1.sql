@@ -1,0 +1,41 @@
+-- Active: 1790162477088@@127.0.0.1@5432@superstore
+CREATE DATABASE superstore
+
+
+CREATE TABLE  customers (
+    customer_id VARCHAR(20) PRIMARY KEY,
+    customer_name VARCHAR(100),
+    segment VARCHAR(50),
+    country VARCHAR(50),
+    region VARCHAR(50)
+    -- FOREIGN KEY(yz_foreign)
+        -- REFERENCES(yz_foreign) 
+);
+
+CREATE TABLE products (
+    product_id VARCHAR(20) PRIMARY KEY,
+    product_name VARCHAR(100),
+    segment VARCHAR(50),
+    country VARCHAR(50),
+    region VARCHAR(50)
+
+);
+
+CREATE TABLE orders (
+    order_id VARCHAR(20) PRIMARY KEY,
+    customer_id VARCHAR(20),
+    FOREIGN KEY(customer_id)
+        REFERENCES customers(customer_id),
+    product_id VARCHAR(20),    
+    FOREIGN KEY(product_id)
+        REFERENCES products(product_id),
+    order_date DATE,
+    ship_date DATE,
+    sales DECIMAL(10,2),
+    quantity INT,
+    discount DECIMAL(10,2),
+    profit DECIMAL(10,2)
+
+);
+
+SELECT * FROM orders
