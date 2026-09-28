@@ -1,4 +1,4 @@
--- Active: 1790162477088@@127.0.0.1@5432@superstore
+
 CREATE DATABASE superstore
 
 
@@ -14,10 +14,9 @@ CREATE TABLE  customers (
 
 CREATE TABLE products (
     product_id VARCHAR(20) PRIMARY KEY,
-    product_name VARCHAR(100),
-    segment VARCHAR(50),
-    country VARCHAR(50),
-    region VARCHAR(50)
+    category VARCHAR(50),
+    sub_category VARCHAR(50),
+    product_name VARCHAR(100)
 
 );
 
@@ -38,4 +37,3 @@ CREATE TABLE orders (
 
 );
 
-SELECT * FROM orders
