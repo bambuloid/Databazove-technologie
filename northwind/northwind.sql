@@ -1,4 +1,4 @@
-CREATE DATABASE northwind;
+CREATE SCHEMA northwind;
 
 CREATE TABLE dim_employees (
     EmployeeID INT PRIMARY KEY,
